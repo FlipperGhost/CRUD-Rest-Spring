@@ -1,8 +1,12 @@
  # CRUD-Rest-Spring-FlyWay
 #CRUD - Cliente e Ordens de serviço.
+Dependencias:
 
-Este projeto possui um Crud em spring web mvc, utiliza Hibernate e Flyway para composição do banco. Spring Jpa para conexões
-com o banco MySQL.
+Spring Framework
+Spring Data Jpa
+FlyWay
+Hibernate
+JDBC MySQL Driver
 
 # Para rodar o projeto.
 
