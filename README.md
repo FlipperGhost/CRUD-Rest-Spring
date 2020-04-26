@@ -4,7 +4,7 @@
 Este projeto possui um Crud em spring web mvc, utiliza Hibernate e Flyway para composição do banco. Spring Jpa para conexões
 com o banco MySQL.
 
-#Para rodar o projeto.
+# Para rodar o projeto.
 
 Este projeto utiliza a versão do build maven 3.6.3
 
@@ -17,7 +17,7 @@ Para rodar utilize o comando bash abaixo:
 
 $bash> java -jar exemplo.jar
 
-#Ambiente de desenvolvimento.
+# Ambiente de desenvolvimento.
 
 Este projeto utiliza a versão do build maven 3.6.3
 
