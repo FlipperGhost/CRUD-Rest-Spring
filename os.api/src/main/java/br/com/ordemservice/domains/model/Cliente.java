@@ -5,10 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import br.com.ordemservice.domains.validations.ValidationGroups;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +23,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 public class Cliente {
-
+	
+	@NotNull(groups=ValidationGroups.ClienteId.class)
 	@Id
 	@Column(name = "id")
 	private long id;
