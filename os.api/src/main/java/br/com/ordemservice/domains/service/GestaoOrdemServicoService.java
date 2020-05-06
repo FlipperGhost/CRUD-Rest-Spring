@@ -4,13 +4,23 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
-import br.com.ordemservice.domains.model.OrdemServico;
+import br.com.ordemservice.api.model.ComentarioInputModel;
+import br.com.ordemservice.api.model.ComentarioModel;
+import br.com.ordemservice.api.model.OrdemServicoInputModel;
+import br.com.ordemservice.api.model.OrdemServicoModel;
 
 public interface GestaoOrdemServicoService {
-	public OrdemServico criar(OrdemServico ordemServico);
+	public OrdemServicoModel criar(OrdemServicoInputModel ordemServicoInputModel);
 
-	public List<OrdemServico> listarOrdemServico();
+	public List<OrdemServicoModel> listarOrdemServico();
 
-	public ResponseEntity<OrdemServico> bucarPorId(Long ordemServicoId);
+	public ResponseEntity<OrdemServicoModel> bucarPorId(Long ordemServicoId);
 	
+	public ComentarioModel criarComentario(Long ordemServicoId, ComentarioInputModel comentarioInputModel);
+	
+	public List<ComentarioModel> buscarComentario(Long ordemServicoId);
+
+	public void finalizar(Long ordemServicoId);
+
+	public void cancelar(Long ordemServicoId);
 }

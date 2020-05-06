@@ -7,15 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import br.com.ordemservice.domains.model.Cliente;
 
-
-
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
 	
-	List<Cliente> findByName(String nome);
+	public List<Cliente> findByNome(String nome);
 
-	Cliente findByEmail(String email);
+	public Cliente findByEmail(String email);
 	
 	
 	

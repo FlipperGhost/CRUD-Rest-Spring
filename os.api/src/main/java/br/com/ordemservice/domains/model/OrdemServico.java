@@ -11,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.NotBlank;
@@ -19,8 +21,12 @@ import javax.validation.groups.ConvertGroup;
 import javax.validation.groups.Default;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
+import br.com.ordemservice.api.model.Comentario;
 import	br.com.ordemservice.domains.validations.ValidationGroups;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -35,7 +41,6 @@ public class OrdemServico {
 	private Long id;
 	
 	@Valid
-	@ConvertGroup(from = Default.class ,to = ValidationGroups.ClienteId.class)
 	@NotNull
 	@ManyToOne
 	private Cliente cliente;
@@ -46,14 +51,13 @@ public class OrdemServico {
 	@NotNull
 	private BigDecimal preco;
 	
-	@JsonProperty(access=Access.READ_ONLY)
+	@OneToMany(mappedBy="ordemServico")
+	private List<Comentario> comentario = new ArrayList<Comentario>();
+	
 	@Enumerated(EnumType.STRING)
 	private StatusOrdemServico status;
-	
-	@JsonProperty(access=Access.READ_ONLY)
+
 	private OffsetDateTime dataAbertura;
-	
-	@JsonProperty(access=Access.READ_ONLY)
 	private OffsetDateTime dataFinalizacao;
 	
 	

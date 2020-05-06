@@ -31,19 +31,16 @@ public class Cliente {
 
 	@NotBlank
 	@Size( max = 60)
-	@Column(name = "name")
-	private String name;
+	private String nome;
 
 	@NotBlank
 	@Email
 	@Size( max = 255)
-	@Column(name = "email")
 	private String email;
 	
 	@NotBlank
 	@Size( max = 20)
-	@Column(name = "fone")
-	private String telefone;
+	private String fone;
 
 	@Override
 	public int hashCode() {

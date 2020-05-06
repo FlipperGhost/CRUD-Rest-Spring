@@ -3,7 +3,7 @@
 Create table cliente (
 
 id bigint not null auto_increment,
-name varchar(150) not null,
+nome varchar(150) not null,
 email varchar(255),
 fone varchar(20),
 primary key (id)
@@ -23,5 +23,3 @@ data_finalizacao datetime,
 primary key(id)
 );
 
-Alter table ordem_servico add constraint fk_ordem_servico_cliente 
-foreign key (cliente_id) references cliente(id);
