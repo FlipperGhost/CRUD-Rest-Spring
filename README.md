@@ -17,7 +17,7 @@ Este projeto utiliza a versão do build maven 3.6.3
 * tero Java Jre instalado e configurar as variáves de ambiente;
 * gerar o .jar utilizando o build maven;
 
-###Para rodar utilize o comando bash abaixo:
+### Para rodar utilize o comando bash abaixo:
 
 * $bash> java -jar exemplo.jar
 
