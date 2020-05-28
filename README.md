@@ -10,11 +10,8 @@
 
 ## Para rodar o projeto.
 
-Este projeto utiliza a versão do build maven 3.6.3
-
-
 ### É necessário:
-* tero Java Jre instalado e configurar as variáves de ambiente;
+* tero Java Jre 8 instalado e configurar as variáves de ambiente;
 * gerar o .jar utilizando o build maven;
 
 ### Para rodar utilize o comando bash abaixo:
@@ -22,8 +19,6 @@ Este projeto utiliza a versão do build maven 3.6.3
 * $bash> java -jar exemplo.jar
 
 # Ambiente de desenvolvimento.
-
-Este projeto utiliza a versão do build maven 3.6.3
 
 ### É necessário:
 * ter o java Jdk 11 instalado e configurar as variáves de ambiente;
