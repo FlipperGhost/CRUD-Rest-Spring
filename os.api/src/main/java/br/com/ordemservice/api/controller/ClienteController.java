@@ -75,5 +75,9 @@ public class ClienteController {
 
 		}
 	}
+	@GetMapping("/hueheue")
+	public String resposta() {
+		return "hueheueheu";
+	}
 
 }
